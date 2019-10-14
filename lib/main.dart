@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:my_flutter/fot_event.dart';
+import 'package:uuid/uuid.dart';
+
+
+var uuid = new Uuid();
+
 
 void main() => runApp(MyApp());
-
 
 class MyApp extends StatelessWidget {
   @override
@@ -25,11 +30,24 @@ class RandomWordsState extends State<RandomWords> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
   final Set<WordPair> _saved = Set<WordPair>(); 
 
+  String data = '无';
+  void initState() {
+    eventBus.on<MyEvent>().listen((MyEvent event) =>
+      show(event.text)
+    );
+  }
+
+  void show(String val) {
+    setState(() {
+      data= val;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('Startup Name Generator:$data'),
         actions: <Widget>[     
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
         ], 
@@ -70,6 +88,7 @@ class RandomWordsState extends State<RandomWords> {
         color: alreadySaved ? Colors.red : null,
       ),
       onTap: () {
+        eventBus.fire(new MyEvent(uuid.v4()));
         setState(() {
           if (alreadySaved) {
             _saved.remove(pair);
@@ -84,6 +103,7 @@ class RandomWordsState extends State<RandomWords> {
 
 
    void _pushSaved() {
+
 
     Navigator.of(context).push(
       MaterialPageRoute<void>(
