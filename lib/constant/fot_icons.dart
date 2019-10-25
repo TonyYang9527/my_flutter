@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter/widgets/icon/social_icon.dart';
-import 'package:fotapp_flutter/constant/fot_colors.dart';
-import 'package:fotapp_flutter/constant/fot_fontFamily.dart';
+import 'package:my_flutter/constant/fot_colors.dart';
+import 'package:my_flutter/constant/fot_fontFamily.dart';
 
 class CustomIcons {
   static const IconData _facebook =

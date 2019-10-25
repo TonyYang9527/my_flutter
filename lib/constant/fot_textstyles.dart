@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fotapp_flutter/constant/fot_fontFamily.dart';
+import 'package:my_flutter/constant/fot_fontFamily.dart';
 
 class FotTextStyles {
   static const TextStyle signUpStyle = TextStyle(

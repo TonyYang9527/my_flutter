@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fotapp_flutter/constant/fot_textstyles.dart';
+import 'package:my_flutter/constant/fot_textstyles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 

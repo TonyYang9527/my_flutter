@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fotapp_flutter/constant/fot_image.dart';
+import 'package:my_flutter/constant/fot_image.dart';
 
 class AuthenticateScreen extends StatelessWidget {
   @override

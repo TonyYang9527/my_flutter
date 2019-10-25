@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../constant/custom_icons.dart';
-import '../form/login_form.dart';
-import '../icon/social_icon.dart';
+import 'package:my_flutter/constant/custom_icons.dart';
+import 'package:my_flutter/form/login_form.dart';
+import 'package:my_flutter/icon/social_icon.dart';
 
 
 
